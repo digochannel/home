@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digo Channel - História e Curiosidades</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Digo Channel explora História e Curiosidades com conteúdo envolvente, educativo e divertido.">
+  <meta name="keywords" content="história, curiosidades, canal, youtube, digo channel, educação, entretenimento">
+  <meta name="author" content="Digo Channel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://digochannel.github.io/home/">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    :root {
+      --roxo-escuro: #4B0082;
+      --fundo-branco: #ffffff;
+      --texto-padrao: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--fundo-branco);
+      color: var(--texto-padrao);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--roxo-escuro);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Força tamanho maior no logotipo */
+    header img.logo-cabecalho {
+      height: 80px;
+      max-width: 100%;
+      width: auto;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .redes-sociais {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Ícones menores que o logotipo */
+    .redes-sociais img {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s, opacity 0.2s;
+      vertical-align: middle;
+    }
+
+    .redes-sociais a:hover img {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+
+    main {
+      padding: 30px 20px;
+    }
+
+    .sobre-mim {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .sobre-mim img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--roxo-escuro);
+    }
+
+    .sobre-mim-texto {
+      max-width: 600px;
+    }
+
+    footer {
+      background-color: var(--roxo-escuro);
+      color: #fff;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9em;
+      margin-top: 40px;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .separador {
+      border: none;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--roxo-escuro), transparent);
+      margin: 40px 0;
+    }
+
+    @media (max-width: 600px) {
+      .sobre-mim {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .sobre-mim-texto {
+        max-width: 100%;
+      }
+
+      header img.logo-cabecalho {
+        height: 60px;
+      }
+
+      .redes-sociais img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <img src="logotipo do cabecalho.png" alt="Logotipo do Digo Channel" class="logo-cabecalho" />
+    <div class="redes-sociais">
+      <a href="https://youtube.com/@digocurioso" target="_blank" title="YouTube">
+        <img src="youtube.png" alt="YouTube" />
+      </a>
+      <a href="https://facebook.com/digocurioso" target="_blank" title="Facebook">
+        <img src="facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://instagram.com/digocurioso" target="_blank" title="Instagram">
+        <img src="instagram.png" alt="Instagram" />
+      </a>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- Seção Sobre Mim -->
+    <section class="sobre-mim">
+      <img src="rodrigo.png" alt="Rodrigo - Criador do Digo Channel" />
+      <div class="sobre-mim-texto" id="sobre-mim-texto">
+        Rodrigo é o criador do Digo Channel, um espaço dedicado a quem ama história, curiosidades e bons papos com conteúdo leve e inteligente. Entre timelines e fatos inusitados, ele transforma cada descoberta num episódio que prende e ensina. 🎬📚
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    &copy; <span id="ano"></span> Digo Channel - Todos os direitos reservados.
+    <div class="redes-sociais" style="margin-top: 10px;">
+      <a href="https://youtube.com/@digocurioso" target="_blank" title="YouTube">
+        <img src="youtube.png" alt="YouTube" />
+      </a>
+      <a href="https://facebook.com/digocurioso" target="_blank" title="Facebook">
+        <img src="facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://instagram.com/digocurioso" target="_blank" title="Instagram">
+        <img src="instagram.png" alt="Instagram" />
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("ano").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
