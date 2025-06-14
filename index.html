@@ -69,6 +69,28 @@
       padding: 30px 20px;
     }
 
+    .sobre-mim {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sobre-mim img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--roxo-escuro);
+    }
+
+    .sobre-mim-texto {
+      max-width: 600px;
+    }
+
     footer {
       background-color: var(--roxo-escuro);
       color: #fff;
@@ -95,12 +117,13 @@
     }
 
     @media (max-width: 600px) {
-      header, footer {
-        padding: 15px;
+      .sobre-mim {
+        flex-direction: column;
+        text-align: center;
       }
 
-      main {
-        padding: 20px 15px;
+      .sobre-mim-texto {
+        max-width: 100%;
       }
     }
   </style>
@@ -125,7 +148,13 @@
 
   <!-- Conteúdo principal -->
   <main>
-    <!-- Conteúdo futuro será adicionado aqui -->
+    <!-- Seção Sobre Mim -->
+    <section class="sobre-mim">
+      <img src="rodrigo.png" alt="Rodrigo - Criador do Digo Channel">
+      <div class="sobre-mim-texto" id="sobre-mim-texto">
+        Carregando informações...
+      </div>
+    </section>
   </main>
 
   <!-- Rodapé -->
@@ -144,10 +173,26 @@
     </div>
   </footer>
 
-  <!-- JS Básico -->
+  <!-- JS atualizado -->
   <script>
     document.getElementById("ano").textContent = new Date().getFullYear();
+
+    // Carregar conteúdo do JSON
+    fetch('sobre-mim.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Erro ao carregar JSON.");
+        }
+        return response.json();
+      })
+      .then(dados => {
+        document.getElementById("sobre-mim-texto").textContent = dados.descricao;
+      })
+      .catch(error => {
+        console.error(error);
+        document.getElementById("sobre-mim-texto").textContent = "Não foi possível carregar o conteúdo.";
+      });
   </script>
 
 </body>
-        </html>
+  </html>
