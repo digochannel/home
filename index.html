@@ -15,9 +15,6 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Font Awesome via jsDelivr (CDN estável e sem token) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" integrity="sha384-TJ8PdVFFmC5HqVbVmwYJGODFPoqRPQq43rZXAjQyUeZRRdJP4cO/NCS7oAYkZ2cs" crossorigin="anonymous">
-
   <style>
     :root {
       --roxo-escuro: #4B0082;
@@ -47,7 +44,6 @@
 
     header img {
       max-height: 60px;
-      height: auto;
     }
 
     .redes-sociais {
@@ -58,16 +54,15 @@
       flex-wrap: wrap;
     }
 
-    .redes-sociais a {
-      color: white;
-      font-size: 1.6em;
-      text-decoration: none;
-      transition: transform 0.2s, color 0.2s;
+    .redes-sociais img {
+      width: 26px;
+      height: 26px;
+      transition: transform 0.2s, opacity 0.2s;
     }
 
-    .redes-sociais a:hover {
+    .redes-sociais a:hover img {
       transform: scale(1.2);
-      color: #ccc;
+      opacity: 0.8;
     }
 
     main {
@@ -82,10 +77,6 @@
       font-size: 0.9em;
       margin-top: 40px;
       box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    footer .redes-sociais {
-      margin-top: 10px;
     }
 
     section {
@@ -108,10 +99,6 @@
         padding: 15px;
       }
 
-      .redes-sociais {
-        gap: 15px;
-      }
-
       main {
         padding: 20px 15px;
       }
@@ -124,9 +111,15 @@
   <header>
     <img src="logotipo do cabecalho.png" alt="Logotipo do Digo Channel">
     <div class="redes-sociais">
-      <a href="https://youtube.com/digocurioso" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://facebook.com/digotvclube" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="https://instagram.com/digocurioso" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@digocurioso" target="_blank" title="YouTube" aria-label="YouTube">
+        <img src="youtube.png" alt="YouTube">
+      </a>
+      <a href="https://facebook.com/digocurioso" target="_blank" title="Facebook" aria-label="Facebook">
+        <img src="facebook.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com/digocurioso" target="_blank" title="Instagram" aria-label="Instagram">
+        <img src="instagram.png" alt="Instagram">
+      </a>
     </div>
   </header>
 
@@ -138,10 +131,16 @@
   <!-- Rodapé -->
   <footer>
     &copy; <span id="ano"></span> Digo Channel - Todos os direitos reservados.
-    <div class="redes-sociais">
-      <a href="https://youtube.com/digocurioso" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://facebook.com/digotvclube" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="https://instagram.com/digocurioso" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <div class="redes-sociais" style="margin-top: 10px;">
+      <a href="https://youtube.com/@digocurioso" target="_blank" title="YouTube" aria-label="YouTube">
+        <img src="youtube.png" alt="YouTube">
+      </a>
+      <a href="https://facebook.com/digocurioso" target="_blank" title="Facebook" aria-label="Facebook">
+        <img src="facebook.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com/digocurioso" target="_blank" title="Instagram" aria-label="Instagram">
+        <img src="instagram.png" alt="Instagram">
+      </a>
     </div>
   </footer>
 
@@ -151,4 +150,4 @@
   </script>
 
 </body>
-  </html>
+        </html>
